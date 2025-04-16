@@ -1,50 +1,48 @@
-# WordTranslation Plugin
+# AI-Powered Summarization Plugin for Excel Processing Applications
+
+This project provides a powerful plugin to summarize content from Excel spreadsheets using AI-based language models. It is designed for users who frequently deal with large Excel files and want quick, meaningful summaries of the data or textual content.
+
+## Features
+
+Automatically summarizes Excel sheet content.
+
+Easy-to-use Python interface.
+
+Compatibility checks and automated setup of required packages.
+
+Support for multiple Python versions (recommended: Python 3.11).
 
 ## Requirements
 
-- **Python 3.x** – Ensure Python is installed on your system.
+Python 3.11.x (Recommended; tested on 3.11.8)
 
-## How to Run
+For Python 3.12.x, you may need to manually install setuptools and Rust toolchain.
 
-1. **Clone the Repository**  
-   Clone or download this repository to your local machine.
+Internet connection (to download dependencies or models if required)
 
-2. **Navigate to the Project Directory**  
-   Open your terminal or command prompt and change to the project directory.
-
-3. **Run the Python File**  
-   Execute the following command:
-   ```bash
-   python WordTranslation.py
-
-4. Handling OS Error 5 (Access Denied)
-   If you encounter an error (e.g., OS Error 5 - "Access Denied") on the first run, simply close the application and run it again. This error is transient and should not occur on subsequent runs.
-
-## Notification: You have to notice those condition below to make sure application runs:
-
-**1.** This project works best with:
-
-   Python 3.11.x (Recommended, tested with 3.11.8) 
-
-   For Python 3.12.x: Although having minor handling, if issues persist, consider using Python 3.11 for smoother setup.
+## Setup Instructions
 
 
-**2.** When run file if you facing error you should open full folder in you IDE for making sure file reading is success
-   Folder structure in your IDE should be like this:
-         AI-POWERED-TRANSLATION-PLUGIN-FOR-WORD-PROCESSING-APPLICATION/
-         │
-         ├── Translator/
-         │   └── (other files)
-         ├── README.md
-         ├── requirements.txt
-         └── WordTranslator.py
+1. **Install Dependencies**
+
+```
+pip install -r requirements.txt
+```
+
+2. **Run the Plugin**
+
+```
+python ExcelSummarization.py
+```
+
+If you encounter OSError: [Errno 5] Access Denied, simply restart the application. It’s a transient issue.
 
 Also, if prompted by your IDE or system security, **trust the source** or allow access, or the plugin might not run.
 
-## Output
+## Notes
 
-When successfully executed, the plugin integrates into your Word workplace, supporting translation tasks with added features such as:
-  - Advanced Translation Customization:
-       Customize translation parameters (e.g., creativity level, output diversity, response focus) through user-adjustable settings.
-  - Seamless Integration:
-       The plugin works within your word processing environment to provide real-time translations.
+This application may download models or packages during runtime. Please be patient during initial setup.
+
+Ensure your Excel file is formatted correctly (e.g., textual content in cells for summarization).
+
+
