@@ -1,0 +1,173 @@
+:root {
+    --primary-color: #2b579a;
+    --primary-hover: #1e3f6f;
+    --secondary-color: #f3f3f3;
+    --border-color: #d1d1d1;
+    --text-color: #333;
+    --success-color: #107c10;
+    --error-color: #a4262c;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+    background-color: #fff;
+    padding: 16px;
+  }
+  
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  .hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  .example {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+    font-style: italic;
+  }
+  
+  .small-input {
+    width: 60px;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .radio-group input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .radio-group label {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-container input[type="range"] {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .toggle-button {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    text-align: left;
+    text-decoration: underline;
+    width: auto;
+  }
+  
+  .advanced-settings {
+    display: none;
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #fafafa;
+  }
+  
+  .primary-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .primary-button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .output-container {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 12px;
+    min-height: 100px;
+  }
+  
+  #outputText {
+    font-size: 14px;
+    white-space: pre-wrap;
+  }
+  
+  /* The loading spinner is created dynamically in JS */
+  #loadingSpinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 9999;
+  }
+  

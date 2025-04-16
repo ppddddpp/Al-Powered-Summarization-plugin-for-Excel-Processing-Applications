@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Summarizer</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="taskpane.js" defer></script>
+    <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Summarizer</h1>
+
+        <div class="form-group">
+            <label for="headerRow">Header Row:</label>
+            <input type="number" id="headerRow" min="0" value="1" />
+        </div>
+
+        <div class="form-group">
+            <label for="formatPrompt">Prompt to run each row:</label>
+            <textarea id="formatPrompt">You are an expert in summarizing data. You are responsible for summarizing data from {{A}} (Only include the summarization).</textarea>
+            <div class="hint">Use {{ColumnName}} to reference any column from your spreadsheet</div>
+            <div class="example">Example: Replace {{A}} with any column name like {{B}} or {{E}}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="outputColumn">Put results in column:</label>
+            <input type="text" id="outputColumn" placeholder="e.g., C" value="B"/>
+        </div>
+
+        <div class="form-group">
+            <label>Start from row:</label>
+            <div class="radio-group">
+                <input type="radio" name="rowMode" id="autoMode" value="auto" checked />
+                <label for="autoMode">Auto</label>
+                <input type="number" id="autoRowCount" value="3" min="1" class="small-input" />
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="rowMode" id="fixedMode" value="fixed" />
+                <label for="fixedMode">Fixed</label>
+                <input type="number" id="fixedStartRow" placeholder="Start Row" value="2" class="small-input" />
+                <input type="number" id="fixedEndRow" placeholder="End Row" value="4" class="small-input" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="temperature">Creativity (Temperature):</label>
+            <div class="slider-container">
+                <input type="range" id="temperature" min="0" max="1" step="0.1" value="0.7" />
+                <span id="temp-display">0.7</span>
+            </div>
+        </div>
+
+        <!-- Advanced Settings button -->
+        <button class="advanced-settings-button" id="advancedSettingsButton">Advanced Settings</button>
+
+        <div class="advanced-settings" id="advancedSettings">
+            <div class="form-group">
+                <label for="topP">Top P:</label>
+                <input type="number" id="topP" value="1" min="0" max="1" step="0.1" />
+            </div>
+            <div class="form-group">
+                <label for="topK">Top K:</label>
+                <input type="number" id="topK" value="40" min="1" />
+            </div>
+            <!-- Choosing the AI models -->
+            <div class="form-group">
+                <label for="model">AI Model:</label>
+                <select id="model">
+                    <option value="Gemini-Flash-2.0">Gemini-Flash-2.0</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="primary-button" id="summarizeButton">Summarize Rows</button>
+    </div>
+    <script>
+        // Run this code after the page has fully loaded
+        window.addEventListener('load', function() {
+          // Get the elements
+          var advancedBtn = document.getElementById('advancedSettingsButton');
+          var advancedPanel = document.getElementById('advancedSettings');
+          
+          // Make sure the panel is hidden initially
+          if (advancedPanel) {
+            advancedPanel.style.display = 'none';
+          }
+          
+          // Add click event listener
+          if (advancedBtn) {
+            advancedBtn.addEventListener('click', function() {
+              // Toggle the panel visibility
+              var currentDisplay = window.getComputedStyle(advancedPanel).display;
+              
+              if (currentDisplay === 'none') {
+                advancedPanel.style.display = 'block';
+                advancedBtn.textContent = 'Hide Advanced Settings';
+              } else {
+                advancedPanel.style.display = 'none';
+                advancedBtn.textContent = 'Advanced Settings';
+              }
+            });
+          }
+        });
+      </script>
+</body>
+</html>

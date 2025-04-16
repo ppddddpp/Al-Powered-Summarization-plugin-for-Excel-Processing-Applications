@@ -1,0 +1,31 @@
+{
+    "functions": [
+      {
+        "id": "GPT_SUMMARIZE",
+        "name": "GPT_SUMMARIZE",
+        "description": "Summarizes text using AI.",
+        "parameters": [
+          {
+            "name": "text",
+            "description": "The text to summarize",
+            "type": "string"
+          },
+          {
+            "name": "format",
+            "description": "The format prompt",
+            "type": "string"
+          },
+          {
+            "name": "temperature",
+            "description": "The randomness from 0.0 to 1.0",
+            "type": "number"
+          }
+        ],
+        "result": {
+          "type": "string",
+          "description": "The summarized text"
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,30 @@
+{
+    "allowCustomDataForDataTypeAny": true,
+    "functions": [
+        {
+            "description": "Summarizes text using AI",
+            "id": "GPT_SUMMARIZE",
+            "name": "GPT_SUMMARIZE",
+            "parameters": [
+                {
+                    "description": "The text to summarize",
+                    "name": "text",
+                    "type": "string"
+                },
+                {
+                    "description": "The format prompt",
+                    "name": "format",
+                    "type": "string"
+                },
+                {
+                    "description": "The randomness (0-1)",
+                    "name": "temperature",
+                    "type": "number"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        }
+    ]
+}
