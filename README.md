@@ -23,19 +23,15 @@ Internet connection (to download dependencies and do the summarize)
 ## Setup Instructions
 
 
-1. **Install Dependencies**
+## Setup Instructions
 
-```
-pip install -r requirements.txt
-```
-
-2. **Run the Plugin**
+1. **Run the Plugin**
 
 ```
 python ExcelSummarization.py
 ```
 
-If you encounter OSError: [Errno 5] Access Denied, simply restart the application. It’s a transient issue.
+If you encounter OSError: [Errno 5] Access Denied if it fail after 3 time try of the code handling just simply restart the application. It’s a transient issue.
 
 Also, if prompted by your IDE or system security, **trust the source** or allow access, or the plugin might not run.
 
