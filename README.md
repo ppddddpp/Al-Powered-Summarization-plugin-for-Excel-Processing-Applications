@@ -18,7 +18,7 @@ Python 3.11.x (Recommended; tested on 3.11.8)
 
 For Python 3.12.x, you may need to manually install setuptools and Rust toolchain.
 
-Internet connection (to download dependencies or models if required)
+Internet connection (to download dependencies and do the summarize)
 
 ## Setup Instructions
 
@@ -45,4 +45,8 @@ This application may download models or packages during runtime. Please be patie
 
 Ensure your Excel file is formatted correctly (e.g., textual content in cells for summarization).
 
+## Demo
 
+For the demo video checking link: 
+
+https://drive.google.com/drive/folders/1m94dOYYvW3L4-hOM6rKhBnr9-Ilw6cHP?usp=sharing
