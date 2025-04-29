@@ -22,9 +22,6 @@ Internet connection (to download dependencies and do the summarize)
 
 ## Setup Instructions
 
-
-## Setup Instructions
-
 1. **Run the Plugin**
 
 ```
