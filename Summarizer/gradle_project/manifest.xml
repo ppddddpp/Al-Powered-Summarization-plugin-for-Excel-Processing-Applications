@@ -18,7 +18,6 @@
     <AppDomain>https://www.contoso.com</AppDomain>
   </AppDomains>
 
-  <!-- ✅ UPDATED: Support Excel -->
   <Hosts>
     <Host Name="Workbook"/>
   </Hosts>
@@ -29,7 +28,6 @@
 
   <Permissions>ReadWriteDocument</Permissions>
 
-  <!-- ✅ UPDATED: Support Excel in VersionOverrides -->
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
                     xsi:type="VersionOverridesV1_0">
     <Hosts>
