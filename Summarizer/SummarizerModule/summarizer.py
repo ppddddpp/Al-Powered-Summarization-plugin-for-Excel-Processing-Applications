@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests from the add-ins
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-CONFIG_FILE_PATH = os.path.join(current_dir, "config.json")
+CONFIG_FILE_PATH = os.path.join(current_dir, "config_key.json")
 
 def load_config_data(config_file=CONFIG_FILE_PATH):
     result = {
